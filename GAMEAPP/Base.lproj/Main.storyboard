@@ -1,24 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GAMEAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-abstract-digital-technology-blue-gaming-background-with-communication-picture-image_1247015" translatesAutoresizingMaskIntoConstraints="NO" id="gAd-Dr-7Y7">
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                </preferredSymbolConfiguration>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIRO AL BLANCO " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdq-LR-AMB">
+                                <rect key="frame" x="312" y="20" width="228" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El valor al que debes atinarle es : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyc-hl-lnc">
+                                <rect key="frame" x="30" y="104" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YuP-d1-s9R"/>
+                                    <constraint firstAttribute="width" constant="343" id="asi-HC-HSM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECORD : 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n48-OZ-PLK">
+                                <rect key="frame" x="30" y="149" width="124" height="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gle-VE-vbF">
+                                <rect key="frame" x="577" y="119" width="168" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="REINICIAR JUEGO">
+                                    <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reiniciarJuego:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jod-l7-QsF"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" preferredBehavioralStyle="pad" translatesAutoresizingMaskIntoConstraints="NO" id="cWU-Lv-0sZ">
+                                <rect key="frame" x="151.66666666666663" y="181.66666666666666" width="549" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="l0r-JD-Vo0"/>
+                                    <constraint firstAttribute="width" constant="545" id="l2S-bv-UBK"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                <color key="maximumTrackTintColor" systemColor="systemRedColor"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYP-Uq-Eh1">
+                                <rect key="frame" x="360" y="226.66666666666666" width="132" height="35.999999999999972"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="r7j-pX-crE"/>
+                                    <constraint firstAttribute="width" constant="132" id="vKg-BF-ZgM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DISPARA ! ">
+                                    <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="disparaValidar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPe-sx-KYn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUNTUACION : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5t-s0-2yU">
+                                <rect key="frame" x="30" y="291.66666666666669" width="157" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="2tP-Xg-ZQn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbz-9m-4FK">
+                                <rect key="frame" x="192" y="291.66666666666669" width="37" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="kTQ-A9-ju0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RONDA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGb-Ri-5hB">
+                                <rect key="frame" x="30" y="318.66666666666669" width="74" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="074-6N-A8l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSw-MY-ycI">
+                                <rect key="frame" x="192" y="318.66666666666669" width="13" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="MDD-bD-OO7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjM-M8-Y1A">
+                                <rect key="frame" x="609" y="291.66666666666669" width="143" height="22"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="CBr-Zt-vYB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SIGUIENTE RONDA">
+                                    <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="11"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-Bl-r37">
+                                <rect key="frame" x="370" y="119" width="22.333333333333314" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XXp-Bl-r37" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="3AA-Cn-qix"/>
+                            <constraint firstItem="n48-OZ-PLK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3BY-Cp-pjx"/>
+                            <constraint firstItem="cWU-Lv-0sZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5U2-eb-8Vq"/>
+                            <constraint firstItem="Zbz-9m-4FK" firstAttribute="leading" secondItem="z5t-s0-2yU" secondAttribute="trailing" constant="5" id="7kY-6d-Gux"/>
+                            <constraint firstItem="tYP-Uq-Eh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A1u-4m-Hd2"/>
+                            <constraint firstItem="oGb-Ri-5hB" firstAttribute="top" secondItem="z5t-s0-2yU" secondAttribute="bottom" constant="5" id="AQb-Wl-oU2"/>
+                            <constraint firstItem="cWU-Lv-0sZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AzX-Vl-8Cv"/>
+                            <constraint firstItem="oGb-Ri-5hB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GWP-kt-ebL"/>
+                            <constraint firstItem="vjM-M8-Y1A" firstAttribute="leading" secondItem="Zbz-9m-4FK" secondAttribute="trailing" constant="380" id="KIV-VJ-H7n"/>
+                            <constraint firstItem="z5t-s0-2yU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TTO-PQ-tVA"/>
+                            <constraint firstItem="vjM-M8-Y1A" firstAttribute="top" secondItem="cWU-Lv-0sZ" secondAttribute="bottom" constant="80" id="ZWx-p0-miq"/>
+                            <constraint firstItem="n48-OZ-PLK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="eBB-t5-ER7"/>
+                            <constraint firstItem="tYP-Uq-Eh1" firstAttribute="top" secondItem="cWU-Lv-0sZ" secondAttribute="bottom" constant="15" id="ePl-WQ-RQd"/>
+                            <constraint firstItem="HSw-MY-ycI" firstAttribute="leading" secondItem="oGb-Ri-5hB" secondAttribute="trailing" constant="88" id="f0e-I3-m6p"/>
+                            <constraint firstItem="z5t-s0-2yU" firstAttribute="top" secondItem="cWU-Lv-0sZ" secondAttribute="bottom" constant="80" id="hd0-su-LVe"/>
+                            <constraint firstItem="eyc-hl-lnc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="htL-9L-YFJ"/>
+                            <constraint firstItem="Zbz-9m-4FK" firstAttribute="top" secondItem="cWU-Lv-0sZ" secondAttribute="bottom" constant="80" id="mad-wx-0UG"/>
+                            <constraint firstItem="HSw-MY-ycI" firstAttribute="top" secondItem="Zbz-9m-4FK" secondAttribute="bottom" constant="5" id="sZ3-KA-XWZ"/>
+                            <constraint firstItem="XXp-Bl-r37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="370" id="xcX-aO-tIr"/>
+                            <constraint firstItem="eyc-hl-lnc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="zTd-hK-OaB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnDispara" destination="tYP-Uq-Eh1" id="YX6-ZZ-mSU"/>
+                        <outlet property="btnReiniciar" destination="Gle-VE-vbF" id="Ytz-OG-SDN"/>
+                        <outlet property="btnSiguienteRonda" destination="vjM-M8-Y1A" id="aia-U3-hQ2"/>
+                        <outlet property="lblMainTitle" destination="wdq-LR-AMB" id="g3P-dk-SYv"/>
+                        <outlet property="lblMarcadorPuntuacion" destination="Zbz-9m-4FK" id="hAT-ij-9Sv"/>
+                        <outlet property="lblPuntuacion" destination="z5t-s0-2yU" id="1iL-mL-YGv"/>
+                        <outlet property="lblRecord" destination="n48-OZ-PLK" id="ECW-eb-T1p"/>
+                        <outlet property="lblRonda" destination="oGb-Ri-5hB" id="zTR-7v-nbm"/>
+                        <outlet property="lblValorAleatorio" destination="XXp-Bl-r37" id="GdN-3V-aql"/>
+                        <outlet property="lblValorPorAtinar" destination="eyc-hl-lnc" id="fOL-ew-FsM"/>
+                        <outlet property="sliderTiro" destination="cWU-Lv-0sZ" id="FuS-du-wik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.69014084507043" y="-28.244274809160306"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pngtree-abstract-digital-technology-blue-gaming-background-with-communication-picture-image_1247015" width="1200" height="563"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
