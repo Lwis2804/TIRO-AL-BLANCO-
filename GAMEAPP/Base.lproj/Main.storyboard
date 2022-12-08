@@ -57,7 +57,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="reiniciarJuego:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jod-l7-QsF"/>
+                                    <action selector="btnReiniciarJuego:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRN-qa-r4E"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" preferredBehavioralStyle="pad" translatesAutoresizingMaskIntoConstraints="NO" id="cWU-Lv-0sZ">
@@ -68,6 +68,9 @@
                                 </constraints>
                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                 <color key="maximumTrackTintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="getSlideNumber:" destination="BYZ-38-t0r" eventType="valueChanged" id="StE-aV-9DT"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYP-Uq-Eh1">
                                 <rect key="frame" x="360" y="226.66666666666666" width="132" height="35.999999999999972"/>
@@ -82,7 +85,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="disparaValidar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPe-sx-KYn"/>
+                                    <action selector="btnDispara:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oau-4G-TVG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUNTUACION : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5t-s0-2yU">
@@ -132,6 +135,9 @@
                                     <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="11"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnSiguienteRonda:" destination="BYZ-38-t0r" eventType="touchUpInside" id="glN-sM-FRH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-Bl-r37">
                                 <rect key="frame" x="370" y="119" width="22.333333333333314" height="22"/>
@@ -167,11 +173,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="gAd-Dr-7Y7" id="FeV-ft-1NB"/>
                         <outlet property="btnDispara" destination="tYP-Uq-Eh1" id="YX6-ZZ-mSU"/>
                         <outlet property="btnReiniciar" destination="Gle-VE-vbF" id="Ytz-OG-SDN"/>
                         <outlet property="btnSiguienteRonda" destination="vjM-M8-Y1A" id="aia-U3-hQ2"/>
                         <outlet property="lblMainTitle" destination="wdq-LR-AMB" id="g3P-dk-SYv"/>
                         <outlet property="lblMarcadorPuntuacion" destination="Zbz-9m-4FK" id="hAT-ij-9Sv"/>
+                        <outlet property="lblNoRonda" destination="HSw-MY-ycI" id="hGD-cQ-eFM"/>
                         <outlet property="lblPuntuacion" destination="z5t-s0-2yU" id="1iL-mL-YGv"/>
                         <outlet property="lblRecord" destination="n48-OZ-PLK" id="ECW-eb-T1p"/>
                         <outlet property="lblRonda" destination="oGb-Ri-5hB" id="zTR-7v-nbm"/>
@@ -182,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.69014084507043" y="-28.244274809160306"/>
+            <point key="canvasLocation" x="-27" y="79"/>
         </scene>
     </scenes>
     <resources>
