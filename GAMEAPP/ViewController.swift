@@ -48,6 +48,9 @@ class ViewController: UIViewController {
         self.randomValue = self.generateRandomValue()
         self.lblValorAleatorio.text = String(randomValue)
         self.setUpSlider()
+        self.btnReiniciar.isHidden = true
+        self.btnSiguienteRonda.isHidden = true
+
     }
     
     func generateRandomValue () -> Int {
@@ -71,9 +74,12 @@ class ViewController: UIViewController {
     @IBAction func btnDispara(_ sender: Any) {
         self.valida(valor1: randomValue, valor2: sliderValue)
         self.lblMarcadorPuntuacion.text = "\(pointNumber)"
-        self.rondas += 1
+        self.rondas = rondas + 1
         self.lblNoRonda.text = "\(rondas)"
         self.btnDispara.isHidden = true
+        self.btnSiguienteRonda.isHidden = false
+        self.lblRecord.isHidden = true
+        
     }
 
     
@@ -83,12 +89,16 @@ class ViewController: UIViewController {
         if val == 0 {
             print("ganaste 100 puntos")
             self.pointNumber += 100
+         //   showAlert1(WithTitle: "ACERTASTE", AndMessage: "GANAS 100 PUNTOS")
         } else if val <= 5 {
             print("Ganaste 10 puntos")
             self.pointNumber += 10
+         //   showAlert1(WithTitle: "CERCA", AndMessage: "SOLO SUMAS 10 PUNTOS")
         } else if val <= 10 {
+         //   showAlert1(WithTitle: "TIBIO", AndMessage: "LO SIENTO NO HAY PUNTOS PARA TI")
             print("No ganas puntos")
         } else {
+         //   showAlert1(WithTitle: "MUY LEJOS", AndMessage: "INTENTA DE NUEVO")
             print("No pues no compa")
         }
     }
@@ -98,11 +108,15 @@ class ViewController: UIViewController {
         self.lblValorAleatorio.text = String(randomValue)
         self.setUpSlider()
         self.btnDispara.isHidden = false
+        self.btnSiguienteRonda.isHidden = true
         if lblNoRonda.text == "3" {
             btnSiguienteRonda.isHidden = true
         }
         if lblNoRonda.text == "3" {
             btnDispara.isHidden = true
+        }
+        if lblNoRonda.text == "3" {
+            btnReiniciar.isHidden = false
         }
     }
     
@@ -110,10 +124,25 @@ class ViewController: UIViewController {
         self.randomValue = self.generateRandomValue()
         self.lblValorAleatorio.text = String(randomValue)
         self.setUpSlider()
-        btnSiguienteRonda.isHidden = false
-        btnDispara.isHidden = false
-    }
+        self.btnSiguienteRonda.isHidden = true
+        self.btnDispara.isHidden = false
+        self.rondas = 0
+        self.lblNoRonda.text = "\(rondas)"
+        self.pointNumber = 0
+        self.lblMarcadorPuntuacion.text = "\(pointNumber)"
+        if lblNoRonda.text == "0" {
+            btnReiniciar.isHidden = true
+        }
+        self.lblRecord.isHidden = false
+      //  self.btnReiniciar.isEnabled = false
+        }
     
+    func showAlert1(WithTitle strTitle:String , AndMessage strMessage:String) {
+            let alert = UIAlertController(title: strTitle , message: strMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ACERTASTE, GANAS 100 PUNTOS", style: .default , handler: nil))
+        }
+
+ 
 }
 
 
