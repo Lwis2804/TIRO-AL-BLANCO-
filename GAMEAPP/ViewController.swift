@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var lblMainTitle: UILabel!{
         didSet{ self.lblMainTitle.layer.cornerRadius = 8 }
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         didSet{ self.btnSiguienteRonda.layer.cornerRadius = 8 }
     }
     // V A R I A B L E S
-
+    
     var randomValue : Int = 0
     var rondas: Int = 0
     var pointNumber: Int = 0
@@ -52,11 +52,11 @@ class ViewController: UIViewController {
         self.btnReiniciar.isHidden = true
         self.btnSiguienteRonda.isHidden = true
         self.lblRecord.isHidden = true
-
+        
     }
     
     func generateRandomValue () -> Int {
-       return Int(arc4random_uniform(100))
+        return Int(arc4random_uniform(100))
     }
     
     func setUpSlider (){
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         self.lblRecord.isHidden = true
         
     }
-
+    
     
     
     func valida(valor1 num1: Int, valor2 num2 : Int){
@@ -91,16 +91,16 @@ class ViewController: UIViewController {
         if val == 0 {
             print("ganaste 100 puntos")
             self.pointNumber += 100
-         showAlert(WithTitle: "ACERTASTE", AndMessage: "GANAS 100 PUNTOS")
+            showAlert(WithTitle: "ACERTASTE", AndMessage: "GANAS 100 PUNTOS")
         } else if val <= 5 {
             print("Ganaste 10 puntos")
             self.pointNumber += 10
-         showAlert(WithTitle: "CERCA", AndMessage: "SOLO SUMAS 10 PUNTOS")
+            showAlert(WithTitle: "CERCA", AndMessage: "SOLO SUMAS 10 PUNTOS")
         } else if val <= 10 {
-           showAlert(WithTitle: "TIBIO", AndMessage: "LO SIENTO NO HAY PUNTOS PARA TI")
+            showAlert(WithTitle: "TIBIO", AndMessage: "LO SIENTO NO HAY PUNTOS PARA TI")
             print("No ganas puntos")
         } else {
-           showAlert(WithTitle: "MUY LEJOS", AndMessage: "INTENTA DE NUEVO")
+            showAlert(WithTitle: "MUY LEJOS", AndMessage: "INTENTA DE NUEVO")
             print("No pues no compa")
         }
     }
@@ -125,9 +125,9 @@ class ViewController: UIViewController {
         }
         
         
-    
         
-    
+        
+        
     }
     
     @IBAction func btnReiniciarJuego(_ sender: Any) {
@@ -144,16 +144,16 @@ class ViewController: UIViewController {
             btnReiniciar.isHidden = true
         }
         self.lblRecord.isHidden = false
-      //  self.btnReiniciar.isEnabled = false
-        }
+        //  self.btnReiniciar.isEnabled = false
+    }
     
     func showAlert(WithTitle strTitle:String , AndMessage strMessage:String) {
-            let alert = UIAlertController(title: strTitle , message: "" , preferredStyle: .alert)
+        let alert = UIAlertController(title: strTitle , message: "" , preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: strMessage , style: .default , handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-
- 
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 
 
