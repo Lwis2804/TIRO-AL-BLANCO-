@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     var rondas: Int = 0
     var pointNumber: Int = 0
     var sliderValue: Int = 0
+    var recordPoint : Int = 0
     
     
     
@@ -50,6 +51,7 @@ class ViewController: UIViewController {
         self.setUpSlider()
         self.btnReiniciar.isHidden = true
         self.btnSiguienteRonda.isHidden = true
+        self.lblRecord.isHidden = true
 
     }
     
@@ -89,16 +91,16 @@ class ViewController: UIViewController {
         if val == 0 {
             print("ganaste 100 puntos")
             self.pointNumber += 100
-         //   showAlert1(WithTitle: "ACERTASTE", AndMessage: "GANAS 100 PUNTOS")
+         showAlert(WithTitle: "ACERTASTE", AndMessage: "GANAS 100 PUNTOS")
         } else if val <= 5 {
             print("Ganaste 10 puntos")
             self.pointNumber += 10
-         //   showAlert1(WithTitle: "CERCA", AndMessage: "SOLO SUMAS 10 PUNTOS")
+         showAlert(WithTitle: "CERCA", AndMessage: "SOLO SUMAS 10 PUNTOS")
         } else if val <= 10 {
-         //   showAlert1(WithTitle: "TIBIO", AndMessage: "LO SIENTO NO HAY PUNTOS PARA TI")
+           showAlert(WithTitle: "TIBIO", AndMessage: "LO SIENTO NO HAY PUNTOS PARA TI")
             print("No ganas puntos")
         } else {
-         //   showAlert1(WithTitle: "MUY LEJOS", AndMessage: "INTENTA DE NUEVO")
+           showAlert(WithTitle: "MUY LEJOS", AndMessage: "INTENTA DE NUEVO")
             print("No pues no compa")
         }
     }
@@ -109,15 +111,23 @@ class ViewController: UIViewController {
         self.setUpSlider()
         self.btnDispara.isHidden = false
         self.btnSiguienteRonda.isHidden = true
+        self.lblRecord.isHidden = true
         if lblNoRonda.text == "3" {
             btnSiguienteRonda.isHidden = true
         }
         if lblNoRonda.text == "3" {
             btnDispara.isHidden = true
+            self.recordPoint = pointNumber
+            self.lblRecord.text = "El record actual es :\(recordPoint)"
         }
         if lblNoRonda.text == "3" {
             btnReiniciar.isHidden = false
         }
+        
+        
+    
+        
+    
     }
     
     @IBAction func btnReiniciarJuego(_ sender: Any) {
@@ -137,9 +147,10 @@ class ViewController: UIViewController {
       //  self.btnReiniciar.isEnabled = false
         }
     
-    func showAlert1(WithTitle strTitle:String , AndMessage strMessage:String) {
-            let alert = UIAlertController(title: strTitle , message: strMessage, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "ACERTASTE, GANAS 100 PUNTOS", style: .default , handler: nil))
+    func showAlert(WithTitle strTitle:String , AndMessage strMessage:String) {
+            let alert = UIAlertController(title: strTitle , message: "" , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: strMessage , style: .default , handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
 
  
